@@ -37,13 +37,13 @@
             icon="book"
           />BIOGRAPHY</h3>
         <dl class="biography__list">
-          <dt class="biography__item--title">2020年</dt>
-          <dd class="biography__item">都内のシステム開発会社にフロントエンド開発として所属</dd>
+              <dt class="biography__item--title">2020年</dt>
+              <dd class="biography__item">都内のシステム開発会社にフロントエンド開発として所属</dd>
           <dd class="biography__item">Vueにて会場案内システムを書き換え</dd>
-          <dt class="biography__item--title">2018年</dt>
-          <dd class="biography__item">都内のシステム開発会社にシステムエンジニアとして所属</dd>
-          <dd class="biography__item">Angularを利用したチケット販売システム（BtoB）の開発にアサイン</dd>
-        </dl>
+              <dt class="biography__item--title">2018年</dt>
+              <dd class="biography__item">都内のシステム開発会社にシステムエンジニアとして所属</dd>
+              <dd class="biography__item">Angularを利用したチケット販売システム（BtoB）の開発にアサイン</dd>
+            </dl>
       </div>
       <div class="profile__skillset profile__item">
         <h3>
@@ -171,9 +171,10 @@
   &__item {
     font-size: 0.8rem;
     width: calc(33% - 16px);
-    max-width: 100px;
+    min-width: 40px;
+    max-width: 60px;
     text-align: center;
-    margin: 16px 8px;
+    margin: 0 8px 16px;
 
     @include for-mobile {
       width: 50%;
@@ -181,15 +182,21 @@
 
     &--logo {
       display: flex;
+      flex: 1 0 80%;
       width: 80%;
       height: 80%;
+      max-height: 60px;
       margin: auto;
       margin-bottom: 4px;
       img {
+        flex: 1 0 100%;
         max-width: 100%;
         max-height: 100%;
+        margin: auto;
       }
     }
+  }
+}
   }
 }
 

@@ -1,6 +1,9 @@
 <template>
   <main>
-    <div class="profile">
+    <div
+      class="profile"
+      id="profile"
+    >
       <h2>PROFILE</h2>
       <div class="profile__content">
         <div class="profile__name profile__item">
@@ -37,9 +40,19 @@
           創作活動, 🐤, 🎮
           趣味で絵を描いたりしています
         </div>
+        <div class="profile__links profile__item">
+          <h3>LINK</h3>
+          <div class="link__item">
+            GitHub
+            <a href="https://github.com/atoze">github.com/atoze</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="playground">
+    <div
+      class="playground"
+      id="playground"
+    >
       <h2>PLAYGROUND</h2>
       <div class="playground__content">
         <dl>
@@ -59,14 +72,10 @@
         </dl>
       </div>
     </div>
-    <div class="links">
-      <h2>LINK</h2>
-      <div class="link__content">
-        GitHub
-        <a href="https://github.com/atoze">github.com/atoze</a>
-      </div>
-    </div>
-    <div class="contact">
+    <div
+      class="contact"
+      id="contact"
+    >
       <h2>CONTACT</h2>
       <div class="contact__content">
         <form>

@@ -1,17 +1,17 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-  </div>
+  <TheHeaderNavigation></TheHeaderNavigation>
   <router-view />
   <TheFooter></TheFooter>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import TheHeaderNavigation from "@/components/TheHeaderNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
+    TheHeaderNavigation,
     TheFooter
   }
 });
@@ -22,7 +22,6 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 

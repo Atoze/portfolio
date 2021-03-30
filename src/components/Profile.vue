@@ -5,30 +5,42 @@
   >
     <h2>PROFILE</h2>
     <div class="profile__container">
-      <div class="profile__name profile__item">
-        <h3>
-          <FontAwesomeIcon
-            class="fa__icon"
-            icon="pen"
-          />NAME</h3>
-        和田 真理菜 - Marina Wada
-        <h3>HN</h3>
-        <p>あとぜ - Atoze</p>
-        <h3>
-          <FontAwesomeIcon
-            class="fa__icon"
-            icon="birthday-cake"
-          />Birthday</h3>
-        <p>02-23</p>
-        <h3>
-          <FontAwesomeIcon
-            class="fa__icon"
-            icon="search"
-          />Interest</h3>
-        <p>
-          UIやUXに興味を持っております。<br />
-          様々なコンテンツをクリエイティブ＆システマチックに表現していけたらなあと思っております。
-        </p>
+      <div class="profile__about-me profile__item">
+        <div class="about-me__item">
+          <h3>
+            <FontAwesomeIcon
+              class="fa__icon"
+              icon="pen"
+            />NAME</h3>
+          <p>和田 真理菜 - Marina Wada</p>
+        </div>
+        <div class="about-me__item">
+          <h3>
+            <FontAwesomeIcon
+              class="fa__icon"
+              icon="ghost"
+            />HN</h3>
+          <p>あとぜ - Atoze</p>
+        </div>
+        <div class="about-me__item">
+          <h3>
+            <FontAwesomeIcon
+              class="fa__icon"
+              icon="birthday-cake"
+            />Birthday</h3>
+          <p>1995-02-23</p>
+        </div>
+        <div class="about-me__item">
+          <h3>
+            <FontAwesomeIcon
+              class="fa__icon"
+              icon="search"
+            />Interest</h3>
+          <p>
+            UIやUXに興味を持っております。<br />
+            様々なコンテンツをクリエイティブ＆システマチックに表現していきたいと思います。
+          </p>
+        </div>
       </div>
       <div class="profile__biography profile__item">
         <h3>
@@ -36,14 +48,28 @@
             class="fa__icon"
             icon="book"
           />BIOGRAPHY</h3>
-        <dl class="biography__list">
-              <dt class="biography__item--title">2020年</dt>
-              <dd class="biography__item">都内のシステム開発会社にフロントエンド開発として所属</dd>
-          <dd class="biography__item">Vueにて会場案内システムを書き換え</dd>
-              <dt class="biography__item--title">2018年</dt>
-              <dd class="biography__item">都内のシステム開発会社にシステムエンジニアとして所属</dd>
-              <dd class="biography__item">Angularを利用したチケット販売システム（BtoB）の開発にアサイン</dd>
+        <ul class="biography__list list">
+          <li>
+            <dl>
+              <dt class="biography__item--title">2020</dt>
+              <dd class="biography__item list__item">都内のシステム開発会社にフロントエンド開発として所属</dd>
+              <dd class="biography__item list__item">Vueにて会場案内・検索システム（BtoC）の開発にアサイン</dd>
             </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="biography__item--title">2019</dt>
+              <dd class="biography__item list__item">ヘッドレスCMSの開発・パッケージ化にアサイン</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="biography__item--title">2018</dt>
+              <dd class="biography__item list__item">都内のシステム開発会社にシステムエンジニアとして所属</dd>
+              <dd class="biography__item list__item">Angularを利用した店舗管理、会計システムの次期バージョンアップ（BtoB）の開発にアサイン</dd>
+            </dl>
+          </li>
+        </ul>
       </div>
       <div class="profile__skillset profile__item">
         <h3>
@@ -115,10 +141,12 @@
             class="fa__icon"
             icon="star"
           />LIKES</h3>
-        <p>
-          創作活動, 🐤, 🎮
-          趣味で絵を描いたりしています
-        </p>
+        <ul class="likes__list li">
+          <li class="likes__item list__item">創作活動</li>
+          <li class="likes__item list__item">🐤</li>
+          <li class="likes__item list__item">🎮</li>
+          <li class="likes__item list__item">趣味で絵を描いたりしています🎨</li>
+        </ul>
       </div>
       <div class="profile__links profile__item">
         <h3>
@@ -126,11 +154,25 @@
             class="fa__icon"
             icon="globe"
           />LINK</h3>
-        <p>
-          <a href="https://github.com/atoze">
-            <FontAwesomeIcon :icon="['fab','github']" />
-          </a>
-        </p>
+
+        <div class="links__list">
+          <div class="links__item">
+            <a
+              class="links__item--icon"
+              href="https://github.com/atoze"
+            >
+              <FontAwesomeIcon :icon="['fab','github']" />
+            </a>
+          </div>
+          <div class="links__item">
+            <router-link
+              to="#contact"
+              class="links__item--icon"
+            >
+              <FontAwesomeIcon icon="envelope" />
+            </router-link>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -161,12 +203,23 @@
   }
 }
 
+.profile__about-me {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-me {
+  &__item {
+    min-width: calc(33% - 24px);
+    margin: 0 12px;
+  }
+}
+
 .skillset {
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: 1clem;
   }
   &__item {
     font-size: 0.8rem;
@@ -197,6 +250,48 @@
     }
   }
 }
+
+.biography {
+  &__item {
+    &--title {
+      font-weight: bold;
+    }
+  }
+}
+
+.likes {
+  &__item {
+    position: relative;
+    &:last-child::after {
+      content: "etc...";
+      display: block;
+      position: relative;
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+}
+
+.links {
+  &__list {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__item {
+    flex: 1;
+    &--icon {
+      font-size: 3rem;
+    }
+  }
+}
+
+.list {
+  &__item {
+    display: list-item;
+    list-style-type: circle;
+    margin-left: 1.6rem;
   }
 }
 

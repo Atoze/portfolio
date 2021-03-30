@@ -8,6 +8,7 @@
 import { defineComponent } from "vue";
 import TheHeaderNavigation from "@/components/TheHeaderNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import "normalize.css";
 
 export default defineComponent({
   name: "Home",
@@ -19,16 +20,18 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+html {
+  font-size: 14px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  font-size: 1rem;
 }
 
 #nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;

@@ -1,8 +1,10 @@
 <template>
   <main>
-    <Profile></Profile>
-    <Playground></Playground>
-    <Contact></Contact>
+    <div class="home">
+      <Profile></Profile>
+      <Playground></Playground>
+      <Contact></Contact>
+    </div>
   </main>
 </template>
 
@@ -21,3 +23,14 @@ export default defineComponent({
   }
 });
 </script>
+<style>
+main {
+  margin-top: 40px;
+}
+.home {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: max(8px, env(safe-area-inset-left));
+  padding-right: max(8px, env(safe-area-inset-right));
+}
+</style>

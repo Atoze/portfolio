@@ -3,8 +3,20 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view />
+  <TheFooter></TheFooter>
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
+import TheFooter from "@/components/TheFooter.vue";
+
+export default defineComponent({
+  name: "Home",
+  components: {
+    TheFooter
+  }
+});
+</script>
 
 <style lang="scss">
 #app {

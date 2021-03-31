@@ -8,13 +8,23 @@
 
 <style lang="scss" scoped>
   .header-navigation {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    padding: 24px max(8px, env(safe-area-inset-left)) 24px max(8px, env(safe-area-inset-left)); 
     text-align: right;
-    padding: 24px max(8px, env(safe-area-inset-left)) 24px max(8px, env(safe-area-inset-left)) ; 
   }
   .navigation__item {
     display: inline-block;
+    color: #000;
+    font-weight: bold;
     margin-right: 24px;
     transition: transform 0.3s;
+
+    &.router-link-exact-active {
+      color: #576b80;
+    }
+
     &:hover {
       transform: translateY(-2px);
     }

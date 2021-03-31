@@ -1,7 +1,7 @@
 <template>
   <footer>
     Copyright(c) 2021<br />
-    @0pt All Rights Reserved.
+    @Atoze's Portfolio All Rights Reserved.
   </footer>
 </template>
 <style lang="scss" scoped>

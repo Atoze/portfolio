@@ -1,4 +1,5 @@
 <template>
+  <LandingCard></LandingCard>
   <main>
     <div class="home">
       <Profile class="home__content"></Profile>
@@ -11,6 +12,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Contact from "@/components/Contact.vue";
+import LandingCard from "@/components/LandingCard.vue"
 import Playground from "@/components/Playground.vue";
 import Profile from "@/components/Profile.vue";
 
@@ -18,6 +20,7 @@ export default defineComponent({
   name: "Home",
   components: {
     Contact,
+    LandingCard,
     Playground,
     Profile
   }

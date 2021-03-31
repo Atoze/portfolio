@@ -3,7 +3,10 @@
     class="profile"
     id="profile"
   >
-    <h2>PROFILE</h2>
+    <AppScrollReveal>
+      <h2>PROFILE</h2>
+    </AppScrollReveal>
+    <AppScrollReveal :delay="400">
     <div class="profile__container">
       <div class="profile__about-me profile__item">
         <div class="about-me__item">
@@ -175,8 +178,22 @@
         </div>
       </div>
     </div>
+    </AppScrollReveal>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import AppScrollReveal from "@/components/AppScrollReveal.vue";
+
+export default defineComponent({
+  name: "Profile",
+  components: {
+    AppScrollReveal
+  }
+});
+</script>
+
 <style lang="scss">
 .profile {
   &__container {

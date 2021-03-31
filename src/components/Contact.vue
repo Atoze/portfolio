@@ -1,20 +1,26 @@
 <template>
   <div class="contact">
-  <h2 id="contact">CONTACT</h2>
-    <div class="contact__content">
-      <ContactForm />
-    </div>
+    <AppScrollReveal>
+      <h2 id="contact">CONTACT</h2>
+    </AppScrollReveal>
+    <AppScrollReveal :delay="400">
+      <div class="contact__content">
+        <ContactForm />
+      </div>
+    </AppScrollReveal>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import ContactForm from "./ContactForm.vue"
+import AppScrollReveal from "@/components/AppScrollReveal.vue";
 
 export default defineComponent({
   name: "Contact",
   components: {
-    ContactForm
+    ContactForm,
+    AppScrollReveal
   }
 });
 </script>

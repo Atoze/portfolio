@@ -1,34 +1,24 @@
 <template>
-  <div
-    class="contact"
-    id="contact"
-  >
-    <h2>CONTACT</h2>
-    <div class="contact__content">
-      <form>
-        <div>
-          <label for="name">お名前</label>
-          <input
-            type="text"
-            name="name"
-          >
-        </div>
-        <div>
-          <label for="email">メールアドレス</label>
-          <input
-            type="email"
-            name="email"
-          >
-        </div>
-        <div>
-          <label for="name">お問い合わせ内容</label>
-          <textarea
-            type="text"
-            name="name"
-            required
-          />
-          </div>
-        </form>
-      </div>
-    </div>
-  </template>
+  <h2>CONTACT</h2>
+  <div class="contact__content">
+    <ContactForm />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import ContactForm from "./ContactForm.vue"
+
+export default defineComponent({
+  name: "Contact",
+  components: {
+    ContactForm
+  }
+});
+</script>
+
+<style lang="scss" scoped>
+  .contact__content {
+    max-width: 720px;
+  }
+</style>

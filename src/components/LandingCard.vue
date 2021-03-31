@@ -1,12 +1,17 @@
 <template>
   <div class="landing-card">
     <div class="landing-card__content">
-      <h1 class="landing-card__title">
-        ATOZE'S PORTFOLIO<span class="landing-card__title--dash"></span>
-      </h1>
-      <p>
-        Everyday can be Beggining of Anything.
-      </p>
+      <AppScrollBlockReveal :delay="200">
+        <h1 class="landing-card__title">
+          ATOZE'S PORTFOLIO<span class="landing-card__title--dash"></span>
+        </h1>
+      </AppScrollBlockReveal>
+      <br />
+      <AppScrollBlockReveal :delay="400">
+        <span>
+          Everyday can be Beggining of Anything.
+        </span>
+      </AppScrollBlockReveal>
     </div>
     <Particles 
       id="landing-card"
@@ -94,6 +99,18 @@
     />
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import AppScrollBlockReveal from "@/components/AppScrollBlockReveal.vue";
+
+export default defineComponent({
+  name: "LandingCard",
+  components: {
+    AppScrollBlockReveal
+  }
+});
+</script>
 
 <style lang="scss" scoped>
   .landing-card {

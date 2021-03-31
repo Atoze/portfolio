@@ -50,15 +50,17 @@
         </div>
         <button
           class="form__button"
+          :class="[{ 'disabled': isRequiredError }]"
           type="submit"
           name="button"
+          :disabled="isRequiredError"
         >送信</button>
       </form>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, computed } from "vue";
 import axios from "axios";
 import AppInput from "@/components/AppInput.vue"
 import AppTextarea from "@/components/AppTextarea.vue"
@@ -76,6 +78,10 @@ export default defineComponent({
       loading: false,
       isSubmitComplete: false,
       submitError: false
+    });
+
+    const isRequiredError = computed(() => {
+      return !state.name || !state.email || !state.message;
     });
 
     const init = () => {
@@ -108,7 +114,7 @@ export default defineComponent({
           init();
         });
     };
-    return { state, onSubmit };
+    return { state, onSubmit, isRequiredError };
   }
 });
 </script>
@@ -121,10 +127,22 @@ export default defineComponent({
     margin-bottom: 10px;
   }
   .form__button {
-    border-radius: 3px;
     padding: 8px 16px;
-    border: 0 none;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3); 
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:not(.disabled):hover {
+      transform: translateY(-2px);
+    }
+    
+    &.disabled {
+      background: white;
+      color: #ccc;
+      border-color: rgba(0, 0, 0, 0.1); 
+      cursor: not-allowed;
+    }
   }
   .error--text {
     color: red;

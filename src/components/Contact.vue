@@ -1,7 +1,9 @@
 <template>
+  <div class="contact">
   <h2 id="contact">CONTACT</h2>
-  <div class="contact__content">
-    <ContactForm />
+    <div class="contact__content">
+      <ContactForm />
+    </div>
   </div>
 </template>
 
@@ -20,5 +22,6 @@ export default defineComponent({
 <style lang="scss" scoped>
   .contact__content {
     max-width: 720px;
+    margin: auto;
   }
 </style>

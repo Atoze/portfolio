@@ -1,9 +1,9 @@
 <template>
   <main>
     <div class="home">
-      <Profile></Profile>
-      <Playground></Playground>
-      <Contact></Contact>
+      <Profile class="home__content"></Profile>
+      <Playground class="home__content"></Playground>
+      <Contact class="home__content"></Contact>
     </div>
   </main>
 </template>
@@ -23,7 +23,7 @@ export default defineComponent({
   }
 });
 </script>
-<style>
+<style lang="scss">
 main {
   margin-top: 40px;
 }
@@ -32,5 +32,22 @@ main {
   margin: auto;
   padding-left: max(8px, env(safe-area-inset-left));
   padding-right: max(8px, env(safe-area-inset-right));
+
+  &__content {
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    text-align: center;
+    &::after {
+      content: "";
+      display: block;
+      background: #666;
+      width: 50%;
+      height: 1px;
+      margin: auto;
+      margin-top: 12px;
+    }
+  }
 }
 </style>

@@ -186,7 +186,7 @@
   }
   &__item {
     box-sizing: border-box;
-    background: #ccc;
+    background: #f5f5f5;
     width: calc(50% - 16px);
     max-width: 100%;
     padding: 24px;
@@ -227,7 +227,7 @@
     min-width: 40px;
     max-width: 60px;
     text-align: center;
-    margin: 0 8px 16px;
+    margin: 0 8px 32px;
 
     @include for-mobile {
       width: 50%;
@@ -277,12 +277,19 @@
     display: flex;
     width: 80%;
     margin: auto;
+    margin-bottom: 1em;
     text-align: center;
   }
   &__item {
     flex: 1;
+        
     &--icon {
+      display: inline-block;
       font-size: 3rem;
+      transition: transform 0.3s;
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 }

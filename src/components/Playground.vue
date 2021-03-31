@@ -54,6 +54,7 @@ export default defineComponent({
 .playground__content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .playground__item {
@@ -62,5 +63,8 @@ export default defineComponent({
   width: 280px;
   max-width: 100%;
   margin: 1em 1.5%;
+  @include for-mobile {
+    width: 100%;
+  }
 }
 </style>

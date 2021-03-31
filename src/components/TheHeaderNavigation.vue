@@ -59,7 +59,7 @@ export default defineComponent({
     width: 100%;
     padding: 24px max(8px, env(safe-area-inset-left)) 24px max(8px, env(safe-area-inset-left)); 
     text-align: right;
-
+    z-index: 99999;
     &.mobile {
       position: fixed;
     }

@@ -9,7 +9,7 @@
     <AppScrollReveal :delay="400">
       <div class="playground__content">
         <a
-          href=""
+          href="https://github.com/Atoze/RainbowCanvas"
           class="playground__item" 
         >
           <AppCard

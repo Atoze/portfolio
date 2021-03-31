@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory("/"),
   routes,
   scrollBehavior: async (to, from, savedPosition) => {
     const findEl = async (hash: string, x: number) => {

@@ -28,7 +28,7 @@
               class="fa__icon"
               icon="birthday-cake"
             />Birthday</h3>
-          <p>1995-02-23</p>
+          <p>1995 / 02 / 23</p>
         </div>
         <div class="about-me__item">
           <h3>
@@ -37,8 +37,8 @@
               icon="search"
             />Interest</h3>
           <p>
-            UIやUXに興味を持っております。<br />
-            様々なコンテンツをクリエイティブ＆システマチックに表現していきたいと思います。
+            フロントエンドの最新技術を齧りつつ、UIやUXに興味を持っております。<br />
+            様々なコンテンツをクリエイティブ＆システマチックに表現していきたいです。
           </p>
         </div>
       </div>
@@ -298,7 +298,7 @@
   &__item {
     display: list-item;
     list-style-type: circle;
-    margin-left: 1.6rem;
+    margin-left: 2.4rem;
   }
 }
 

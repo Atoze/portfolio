@@ -26,6 +26,7 @@ export default defineComponent({
   }
 });
 </script>
+
 <style lang="scss">
 main {
   margin-top: 40px;

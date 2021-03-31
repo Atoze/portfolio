@@ -5,7 +5,7 @@
         ATOZE'S PORTFOLIO<span class="landing-card__title--dash"></span>
       </h1>
       <p>
-        Everyday is Beggining of Everything.
+        Everyday can be Beggining of Anything.
       </p>
     </div>
     <Particles 

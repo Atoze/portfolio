@@ -1,7 +1,7 @@
 <template>
-  <div class="contact">
+  <div class="contact" id="contact">
     <AppScrollReveal>
-      <h2 id="contact">CONTACT</h2>
+      <h2>CONTACT</h2>
     </AppScrollReveal>
     <AppScrollReveal :delay="400">
       <div class="contact__content">
